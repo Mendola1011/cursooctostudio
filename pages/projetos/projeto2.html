@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto 2 - Flappy Bird</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+
+
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="../../index.html">Início</a></li>
+        <li><a href="../../paraoprofessor.html">Para o Professor</a></li>
+        <li><a href="../../sobre.html">Sobre</a></li>
+        <li><a href="../../manual.html">Manual Octostudio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <h1 class="main-title">Projeto 2 - Flappy Bird</h1>
+    <p class="chapter-intro">Neste projeto, vamos desenvolver um jogo em que o ator principal, o Pássaro, deve esquivar das nuvens e coletar as maçãs para marcar pontos.</p>
+
+    <div class="download-button">
+    <a href="../../jogos/projetos/projeto2.octostudio" download class="btn">Baixar Jogo (Flappy Bird)</a>
+    </div>
+   
+<section class="ator-content">
+  <div class="ator-texto">
+    <h2>O Ator Pássaro</h2>
+    <p>O ator Pássaro é controlado com blocos que simulam gravidade, movimentação e colisões. Usamos blocos como "quando play", "sempre mova" e "quando tocar" para criar a mecânica de voo.</p>
+    <button class="toggle-image-btn" onclick="toggleLightbox(this)">Mostrar imagem</button>
+  </div>
+
+  <div class="ator-imagem">
+    <img src="../../images/blocos/bloco2.png" alt="Código do Pássaro">
+  </div>
+</section>
+
+    <section class="ator-content">
+      <h2>Nuvem Alta</h2>
+      <img src="../../images/codigos/nuvem-alta.png" alt="Código da Nuvem Alta">
+      <p>A Nuvem Alta se move da direita para a esquerda e, ao sair da tela, aparece novamente em uma nova posição Y aleatória para aumentar a dificuldade do jogo.</p>
+    </section>
+
+    <section class="ator-content">
+      <h2>Nuvem Baixa</h2>
+      <img src="../../images/codigos/nuvem-baixa.png" alt="Código da Nuvem Baixa">
+      <p>A Nuvem Baixa utiliza a posição Y da Nuvem Alta para manter uma distância fixa, criando um espaço pelo qual o Pássaro deve passar.</p>
+    </section>
+
+    <section class="ator-content">
+      <h2>Maçã</h2>
+      <img src="../../images/codigos/maca.png" alt="Código da Maçã">
+      <p>A Maçã é o objeto que o Pássaro coleta para ganhar pontos. Seu código inclui a movimentação e a lógica de pontuação quando encostada pelo Pássaro.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Meu Site Octostudio</p>
+    <div class="social-links">
+      <a href="https://instagram.com" target="_blank">Instagram</a> |
+      <a href="https://facebook.com" target="_blank">Facebook</a> |
+      <a href="mailto:contato@octostudio.com">Email</a>
+    </div>
+  </footer>
+
+<script src="../../lib/script.js"></script>
+<a href="#" class="back-to-top" aria-label="Voltar ao topo">↑</a>
+<!-- Lightbox HTML (coloque no fim do <body>) -->
+<div id="lightbox" onclick="toggleLightbox()" style="display:none;">
+  <img id="lightbox-img" src="" alt="Imagem em destaque">
+</div>
+
+<!-- Script importado -->
+<script src="../../lib/script.js"></script>
+
+</body>
+</html>
