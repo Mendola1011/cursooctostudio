@@ -390,8 +390,36 @@ footer .social-links a:hover {
 
 .manual-section h2 {
   margin: 0 0 1rem;
-  color: var(--color-primary);
+  color: black;
+  font-family: 'Noto Sans Mono', sans-serif;
 }
+
+.manual-subtitle {
+  max-width: 800px;
+  margin: 3rem auto;
+  background-color: var(--color-primary-light);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+
+.manual-subtitle h2 {
+  margin: 0 0 1rem;
+  font-family: 'Noto Sans Mono', sans-serif;
+  color: black;
+}
+
+.manual-subtitle .purple { background-color: var(--keyword-purple); }
+.manual-subtitle .blue   { background-color: var(--keyword-blue); }
+.manual-subtitle .cyan  { background-color: var(--keyword-cyan); }
+.manual-subtitle .pink    { background-color: var(--keyword-pink); }
+.manual-subtitle .orange { background-color: var(--keyword-orange); }
+.manual-subtitle .yellow { background-color: var(--keyword-yellow); }
+.manual-subtitle .green { background-color: var(--keyword-green); }
+
+
 .back-to-top {
   position: fixed;
   bottom: 20px;
