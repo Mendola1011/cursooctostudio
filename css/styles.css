@@ -224,7 +224,6 @@ footer .social-links a:hover {
   line-height: 1.6;
   color: var(--color-text);
   display: flex;
-  gap: 2rem;
   align-items: center;
   flex-wrap: wrap; /* importante para responsividade */
 }
@@ -378,6 +377,18 @@ footer .social-links a:hover {
   gap: 1rem;
 }
 
+@media (min-width: 768px) {
+  .manual-content.horizontal {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+  }
+}
+
+.manual-text {
+  max-width: 500px;
+}
 
 .manual-content img {
   width: 200px;
