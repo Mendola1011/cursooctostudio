@@ -23,7 +23,7 @@
   <main>
 
     <h1 class="main-title">Projeto 6 - Flappy Bird</h1>
-    <p class="chapter-intro">Neste projeto, vamos desenvolver um jogo em que o ator principal, o Pássaro, deve esquivar das nuvens e coletar as maçãs para marcar pontos.</p>
+    <p class="chapter-intro">Neste projeto, vamos desenvolver um jogo em que o ator principal, o Pássaro, esta sempre “caindo” e se movimenta para cima, como se estivesse voando, quando tocamos na tela, o ator deve esquivar das nuvens e coletar as maçãs para marcar pontos.</p>
 
     <div class="download-button">
     <a href="../../jogos/projetos/projeto6.octostudio" download class="btn">Baixar Jogo (Flappy Bird)</a>
@@ -40,7 +40,11 @@
     </div>
     <div>
       <h2>O Ator Pássaro</h2>
-      <p>O ator Pássaro é controlado com blocos que simulam gravidade, movimentação e colisões. Usamos blocos como "quando play", "sempre mova" e "quando tocar" para criar a mecânica de voo.  </p>
+      <p>Começaremos com o código que controla o movimento do ator Pássaro, composto pelos dois primeiros blocos da imagem, um bloco <a href="../../manual.html#quando-play" class="fundo-chave yellow">Quando Play</a> seguido do bloco <a href="../../manual.html#defina-tamanho" class="fundo-chave purple">Defina Tamanho</a> para 40%, visto que é um tamanho bom para esse ator conseguir passar entre as nuvens, seguido também de um bloco <a href="../../manual.html#sempre" class="fundo-chave orange">Sempre</a> que, com o bloco <a href="../../manual.html#mova" class="fundo-chave green">Mova</a> 50 para baixo, fará o papel de “gravidade”. Agora, para o ator se movimentar para cima, colocaremos um bloco <a href="../../manual.html#quando-tocar" class="fundo-chave yellow">Quando Tocar</a> na tela, acompanhado do bloco <a href="../../manual.html#mova" class="fundo-chave green">Mova</a> 50 para cima, simulando o voo do pássaro.</p>
+
+      <p>Usaremos também um recurso novo, impediremos que o ator saia pelas bordas da tela. Para fazer isso usaremos um bloco <a href="../../manual.html#quando-na-borda" class="fundo-chave yellow">Quando na Borda</a> na borda de baixo, seguido de um bloco <a href="../../manual.html#mova" class="fundo-chave green">Mova</a> 5 para cima (velocidade “raio”) e faremos o oposto com a borda de cima, um bloco <a href="../../manual.html#mova" class="fundo-chave green">Mova</a> 20 para baixo (velocidade “raio”). Esses comandos “empurram” o ator de volta, impedindo que ele saia da tela.</p>
+
+      <p>Agora, para encerrar o jogo, criaremos dois blocos <a href="../../manual.html#quando-encostar" class="fundo-chave yellow">Quando Encostar</a>, um deles será quando o ator Pássaro encostar no ator Nuvem de cima e o outro será para quando o ator Pássaro encostar no ator Nuvem de baixo, os dois serão seguidos de um bloco <a href="../../manual.html#pare" class="fundo-chave orange">Pare</a> tudo, A posição inicial deste ator será na parte esquerda da tela para que tenhamos tempo de reagir ao movimento das nuvens, que vão se deslocar da direita para a esquerda.</p>
     </div>
   </section>
 
@@ -71,6 +75,28 @@
     <div>
       <h2>O Ator Maçã</h2>
       <p>O ator Pássaro é controlado com blocos que simulam gravidade, movimentação e colisões. Usamos blocos como "quando play", "sempre mova" e "quando tocar" para criar a mecânica de voo.  </p>
+    </div>
+  </section>
+
+<section class="futuro">
+  <h2>Para o Futuro</h2>
+  <ul>
+    <li class="estrela-1">Implemente sons quando o ator colidir ou pontuar. (qual bloco usar)</li>
+    <li class="estrela-1">Faça que a pontuação seja mostrada na tela ao final do jogo. (qual bloco usar)</li>
+    <li class="estrela-2">Faça mais atores para o Pássaro coletar ou desviar. (qual bloco usar)</li>
+    <li class="estrela-3">Experimente diferentes dificuldades alterando a distância entre as nuvens.</li>
+  </ul>
+</section> 
+
+  <section class="project-section">
+    <div>
+      <h2>Para o Futuro</h2>
+    <ul>
+    <li>Implemente sons quando o ator colidir ou pontuar. (qual bloco usar)</li>
+    <li>Faça que a pontuação seja mostrada na tela ao final do jogo. (qual bloco usar)</li>
+    <li>Faça mais atores para o Pássaro coletar ou desviar. (qual bloco usar)</li>
+    <li>Experimente diferentes dificuldades alterando a distância entre as nuvens.</li>
+    </ul>
     </div>
   </section>
 

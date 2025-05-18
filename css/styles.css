@@ -105,6 +105,7 @@ html {
   font-family: 'Noto Sans Mono', monospace;
   margin-top: 1rem;
   font-size: 0.9rem;
+  font-weight: bold;
   color: var(--color-keyword);
 }
 
@@ -172,7 +173,7 @@ html {
 
 footer {
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
   background-color: var(--color-terciary);
   margin-top: 2rem;
   font-size: 0.9rem;
@@ -188,11 +189,12 @@ footer .social-links a:hover {
   color: var(--color-accent);
 }
 
+
 .about-section {
   max-width: 800px;
   margin: 2rem auto;
   background-color: var(--color-primary-light);
-  padding: 2rem;
+  padding: 1rem 2rem 2rem 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   line-height: 1.6;
@@ -201,7 +203,7 @@ footer .social-links a:hover {
 
 .chapter-intro {
   max-width: 800px;
-  margin: 1rem auto;
+  margin: 0 auto;
   text-align: center;
   line-height: 1.6;
   color: var(--color-text);
@@ -211,14 +213,14 @@ footer .social-links a:hover {
   text-align: center;
   width: 100%;
   display: block;
-  margin: 2rem 0;
+  margin: 0;
 }
 
 .project-section {
   max-width: 800px; /* antes era 800px */
   margin: 2rem auto;
   background-color: var(--color-primary-light);
-  padding: 2rem;  /* antes era 2rem */
+  padding: 1rem 2rem 2rem 2rem;  /* antes era 2rem */
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   line-height: 1.6;
@@ -246,6 +248,34 @@ footer .social-links a:hover {
 .project-section div {
   flex: 1;
   min-width: 200px;
+}
+
+.fundo-chave {
+  font-family: 'Noto Sans Mono', monospace;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: black;
+  display: inline-block;
+  padding: 0rem 0rem;
+  border-radius: 5px;
+  margin: 0rem;
+  text-decoration: none;
+}
+
+.fundo-chave.purple { background-color: var(--keyword-purple); }
+.fundo-chave.blue   { background-color: var(--keyword-blue); }
+.fundo-chave.cyan  { background-color: var(--keyword-cyan); }
+.fundo-chave.pink    { background-color: var(--keyword-pink); }
+.fundo-chave.orange { background-color: var(--keyword-orange); }
+.fundo-chave.yellow { background-color: var(--keyword-yellow); }
+.fundo-chave.green { background-color: var(--keyword-green); }
+
+
+.fundo-chave:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 0.2s ease;
 }
 
 /* Lightbox overlay */
@@ -300,6 +330,63 @@ footer .social-links a:hover {
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
+.futuro {
+  max-width: 800px; 
+  margin: 2rem auto;
+  background-color: var(--color-primary-light);
+  padding: 1rem 2rem 2rem 2rem;  
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  line-height: 1.6;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap; /* importante para responsividade */
+}
+
+.futuro h2 {
+  color: var(--color-primary);
+  margin-top: 0;     /* ✅ isso evita o espaçamento extra */
+  margin-bottom: 0;
+}
+
+/* Remove o marcador padrão */
+.futuro ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.futuro li {
+  position: relative;
+  padding-left: 3rem;  /* ⬅️ aumenta o espaço para até 3 estrelas */
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.futuro li::before {
+  position: absolute;
+  left: 0;
+  bottom: 0.1rem; /* alinha verticalmente com o texto */
+  font-size: 1rem;
+  color: gold;
+  font-family: "Segoe UI Symbol", "Arial Unicode MS", sans-serif;
+}
+
+/* Quantidade de estrelas por nível */
+.futuro li.estrela-1::before {
+  content: "★";
+}
+
+.futuro li.estrela-2::before {
+  content: "★★";
+}
+
+.futuro li.estrela-3::before {
+  content: "★★★";
+}
+
+
 /* Hide/show based on screen size */
 .mobile-only {
   display: none;
@@ -333,7 +420,7 @@ footer .social-links a:hover {
   max-width: 800px;
   margin: 2rem auto;
   background-color: var(--color-primary-light);
-  padding: 2rem;
+  padding: 1rem 2rem 2rem 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   line-height: 1.6;
@@ -481,7 +568,6 @@ footer .social-links a:hover {
     gap: 0.5rem;
   }
 }
-
 
 
 
