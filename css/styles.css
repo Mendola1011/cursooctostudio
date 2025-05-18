@@ -204,7 +204,7 @@ footer .social-links a:hover {
 .chapter-intro {
   max-width: 800px;
   margin: 0 auto;
-  text-align: center;
+  text-align: justify;
   line-height: 1.6;
   color: var(--color-text);
 }
@@ -227,6 +227,7 @@ footer .social-links a:hover {
   color: var(--color-text);
   display: flex;
   align-items: center;
+  text-align: justify;
   flex-wrap: wrap; /* importante para responsividade */
 }
 
