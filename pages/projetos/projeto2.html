@@ -23,7 +23,10 @@
   <main>
 
     <h1 class="main-title">Projeto 2 - Gambá Saltitante</h1>
+    <div class="chapter-intro">
     <p class="chapter-intro">Neste projeto, vamos desenvolver um jogo similar ao que é mostrado no navegador Chrome quando o dispositivo está desconectado, teremos um gambá que deve pular os cactos que vem em sua direção.</p>
+    <p>A mecânica do jogo é muito simples: a cada toque na tela, o gambá salta e o objetivo é não encostar nos cactos. A versão inicial que vamos construir é composta por apenas 2 atores: o gambá, que responde ao toque pulando, e um cacto, que sempre se desloca da direta para a esquerda. Também incluiremos no jogo uma pontuação que será igual ao número de cactos pulados. Do ponto de vista de programação, vamos usar variáveis para criar um sistema de contagem de pontos e parâmetros aleatórios em um comando.</p>
+    </div>
 
     <div class="download-button">
     <a href="../../jogos/projetos/projeto2.octostudio" download class="btn">Baixar Jogo (Gambá Saltitante)</a>
@@ -39,8 +42,8 @@
         </button>
     </div>
     <div>
-      <h2>O Ator Gambá</h2>
-      <p>O ator Pássaro é controlado com blocos que simulam gravidade, movimentação e colisões. Usamos blocos como "quando play", "sempre mova" e "quando tocar" para criar a mecânica de voo.  </p>
+      <h2>O Ator Gambá (QUE TEXTO RUIM)</h2>
+      <p>O código que controla o comportamento do dinossauro é bastante simples, uma vez que a sua função é pular sempre que a tela é tocado. Para isso, em vez de usarmos o bloco de evento “Quando PLAY”, vamos utilizado o bloco de evento “Quando encostar” (amarelos) e escolher o parâmetro que representa o próprio ator. A este bloco acrescentamos o comando pular. Pode ser necessário ajustar a altura e velocidade do pulo para calibrar a jogabilidade. A posição inicial do ator é colocada no meio da tela, visto que o cacto que se movimentará em sua direção virá do canto direito da tela.</p>
     </div>
   </section>
 

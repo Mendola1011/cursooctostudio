@@ -275,8 +275,8 @@ footer .social-links a:hover {
 
 .fundo-chave:hover {
   cursor: pointer;
-  transform: scale(1.1);
   transition: all 0.2s ease;
+  text-decoration: underline;
 }
 
 /* Lightbox overlay */
