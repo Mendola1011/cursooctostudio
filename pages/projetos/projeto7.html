@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projeto 7 - Flappy Bird</title>
+  <title>Projeto 7 - Gambá Saltitante</title>
   <link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
@@ -22,74 +22,57 @@
 
   <main>
 
-    <h1 class="main-title">Projeto 7 - Flappy Bird</h1>
-    <p class="chapter-intro">Neste projeto, vamos desenvolver um jogo em que o ator principal, o Pássaro, deve esquivar das nuvens e coletar as maçãs para marcar pontos.</p>
+    <h1 class="main-title">Projeto 7 - Gambá Saltitante</h1>
+    <div class="chapter-intro">
+    <p class="chapter-intro">Neste projeto, vamos desenvolver um jogo similar ao que é mostrado no navegador Chrome quando o dispositivo está desconectado, teremos um gambá que deve pular os cactos que vem em sua direção.</p>
+    <p>A mecânica do jogo é muito simples: a cada toque na tela, o gambá salta e o objetivo é não encostar nos cactos. A versão inicial que vamos construir é composta por apenas 2 atores: o gambá, que responde ao toque pulando, e um cacto, que sempre se desloca da direta para a esquerda. Também incluiremos no jogo uma pontuação que será igual ao número de cactos pulados. Do ponto de vista de programação, vamos usar variáveis para criar um sistema de contagem de pontos e parâmetros aleatórios em um comando.</p>
+    </div>
 
     <div class="download-button">
-    <a href="../../jogos/projetos/projeto1.octostudio" download class="btn">Baixar Jogo (Flappy Bird)</a>
+    <a href="../../jogos/projetos/projeto2.octostudio" download class="btn">Baixar Jogo (Gambá Saltitante)</a>
     </div>
    
   <section class="project-section">
     <div class="image-wrapper">
-      <img src="../../images/blocos/bloco2.png" alt="Código do Pássaro" class="desktop-only" />
+      <img src="../../images/codigos/codigo-projeto2-gamba.jpg" alt="Código do Gambá" class="desktop-only" />
         <button 
   	class="show-image-btn mobile-only" 
-  	data-img="../../images/blocos/bloco2.png">
-  	Mostrar imagem
+  	data-img="../../images/codigos/codigo-projeto2-gamba.jpg">
+  	Mostrar Código
         </button>
     </div>
     <div>
-      <h2>O Ator Pássaro</h2>
-      <p>O ator Pássaro é controlado com blocos que simulam gravidade, movimentação e colisões. Usamos blocos como "quando play", "sempre mova" e "quando tocar" para criar a mecânica de voo.  </p>
+      <h2>O Ator Gambá</h2>
+      <p>Começaremos com o código que controla o movimento do ator Gambá, que é bastante simples, visto que seu único movimento será pular, então utlizamos o bloco <a href="../../manual.html#quando-tocar" class="fundo-chave yellow">Quando Tocar</a> e em seguida o bloco <a href="../../manual.html#pule" class="fundo-chave green">Pule</a> 200, para que o Gambá consiga pular por cima do Cacto. Podemos também já definir a variável pontos, que irá contar quantos cactos o jogador conseguiu pular, fazemos isso colocando o bloco <a href="../../manual.html#quando-play" class="fundo-chave yellow">Quando Play</a> e conectando a ele o bloco <a href="../../manual.html#defina-variavel" class="fundo-chave cyan">Defina Variável</a> definindo os pontos como 0 e o bloco <a href="../../manual.html#mostre-variavel" class="fundo-chave cyan">Mostre Variável</a> ativado, para que os pontos apareçam na tela. A posição inicial do ator Gambá deve ser um pouco mais para a esquerda da tela, para que dê tempo de reagir ao movimento do cacto.</p>
     </div>
   </section>
 
   <section class="project-section">
     <div class="image-wrapper">
-      <img src="../../images/blocos/bloco2.png" alt="Código do Pássaro" class="desktop-only" />
+      <img src="../../images/codigos/codigo-projeto2-cacto.jpg" alt="Código do Cacto" class="desktop-only" />
         <button 
   	class="show-image-btn mobile-only" 
-  	data-img="../../images/blocos/bloco2.png">
-  	Mostrar imagem
+  	data-img="../../images/codigos/codigo-projeto2-cacto.jpg"">
+  	Mostrar Código
         </button>
     </div>
     <div>
-      <h2>O Ator Pássaro</h2>
-      <p>O ator Pássaro é controlado com blocos que simulam gravidade, movimentação e colisões. Usamos blocos como "quando play", "sempre mova" e "quando tocar" para criar a mecânica de voo.  </p>
+      <h2>O Ator Cacto</h2>
+      <p>O código do ator Cacto será algo que sempre tem que estar ocorrendo, já que o cacto irá surgir, se mover até a parte esquerda da tela, sumir, retornar à posição inicial, aparecer e fazer tudo novamente, portanto podemos concluir que o código estará dentro de um loop <a href="../../manual.html#sempre" class="fundo-chave orange">Sempre</a>. Então colocaremos o bloco <a href="../../manual.html#quando-play" class="fundo-chave yellow">Quando Play</a> junto do bloco <a href="../../manual.html#sempre" class="fundo-chave orange">Sempre</a> e dentro dele iremos fazer o cacto se mover com o bloco <a href="../../manual.html#mude-variavel" class="fundo-chave cyan">Mude Variável</a> 300 para a esquerda, adicionar um ponto com o <a href="../../manual.html#pule" class="fundo-chave green">Puler</a> e depois esconder o cacto, fazendo ele retornar a posição inicial com o bloco <a href="../../manual.html#va-para" class="fundo-chave green">Vá Para</a> e um bloco <a href="../../manual.html#espere" class="fundo-chave orange">Espere</a> para que seja aleatório o tempo que o cacto irá começar seu movimento, então iremos mostrar ele com o bloco <a href="../../manual.html#mostre" class="fundo-chave purple">Mostre</a> e isso tudo se repetirá. Agora devemos fazer com que o jogo acabe quando o cacto encostar no gambá, para isso usaremos o bloco <a href="../../manual.html#quando-encostar" class="fundo-chave yellow">Quando Encostar</a> no ator Gambá junto com o bloco <a href="../../manual.html#pare" class="fundo-chave orange">Pare</a> tudo. A posição inicial do ator Cacto é bem perto da borda direita da tela.</p>
     </div>
   </section>
 
-  <section class="project-section">
-    <div class="image-wrapper">
-      <img src="../../images/blocos/bloco2.png" alt="Código do Pássaro" class="desktop-only" />
-        <button 
-  	class="show-image-btn mobile-only" 
-  	data-img="../../images/blocos/bloco2.png">
-  	Mostrar imagem
-        </button>
-    </div>
-    <div>
-      <h2>O Ator Pássaro</h2>
-      <p>O ator Pássaro é controlado com blocos que simulam gravidade, movimentação e colisões. Usamos blocos como "quando play", "sempre mova" e "quando tocar" para criar a mecânica de voo.  </p>
-    </div>
-  </section>
+<section class="futuro">
+  <h2>Para o Futuro</h2>
+  <ul>
+    <li class="estrela-1">Implemente sons quando o ator colidir ou pontuar. (<a href="../../manual.html#toque-o-som" class="fundo-chave blue">Toque o Som</a>)</li>
+    <li class="estrela-1">Faça que a pontuação seja mostrada na tela ao final do jogo. (<a href="../../manual.html#diga" class="fundo-chave blue">Diga</a>)</li>
+    <li class="estrela-2">Adicione novos obstáculos com diferentes comportamentos. </li>
+  </ul>
+</section> 
 
-  <section class="project-section">
-    <div class="image-wrapper">
-      <img src="../../images/blocos/bloco2.png" alt="Código do Pássaro" class="desktop-only" />
-        <button 
-  	class="show-image-btn mobile-only" 
-  	data-img="../../images/blocos/bloco2.png">
-  	Mostrar imagem
-        </button>
-    </div>
-    <div>
-      <h2>O Ator Pássaro</h2>
-      <p>O ator Pássaro é controlado com blocos que simulam gravidade, movimentação e colisões. Usamos blocos como "quando play", "sempre mova" e "quando tocar" para criar a mecânica de voo.  </p>
-    </div>
-  </section>
 
-  </main>
+</main>
 
   <footer>
     <p>&copy; 2025 Meu Site Octostudio</p>
