@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projeto 10 - Gambá Saltitante</title>
+  <title>Projeto 10 - Escape Room</title>
   <link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
@@ -22,43 +22,132 @@
 
   <main>
 
-    <h1 class="main-title">Projeto 10 - Gambá Saltitante</h1>
+    <h1 class="main-title">Projeto 10 - Escape Room</h1>
     <div class="chapter-intro">
-    <p class="chapter-intro">Neste projeto, vamos desenvolver um jogo similar ao que é mostrado no navegador Chrome quando o dispositivo está desconectado, teremos um gambá que deve pular os cactos que vem em sua direção.</p>
-    <p>A mecânica do jogo é muito simples: a cada toque na tela, o gambá salta e o objetivo é não encostar nos cactos. A versão inicial que vamos construir é composta por apenas 2 atores: o gambá, que responde ao toque pulando, e um cacto, que sempre se desloca da direta para a esquerda. Também incluiremos no jogo uma pontuação que será igual ao número de cactos pulados. Do ponto de vista de programação, vamos usar variáveis para criar um sistema de contagem de pontos e parâmetros aleatórios em um comando.</p>
+    <p>Introdução</p>
     </div>
 
     <div class="download-button">
-    <a href="../../jogos/projetos/projeto2.octostudio" download class="btn">Baixar Jogo (Gambá Saltitante)</a>
+    <a href="../../jogos/projetos/projeto10.octostudio" download class="btn">Baixar Jogo (Escape Room)</a>
     </div>
    
   <section class="project-section">
     <div class="image-wrapper">
-      <img src="../../images/codigos/codigo-projeto2-gamba.jpg" alt="Código do Gambá" class="desktop-only" />
+      <img src="../../images/codigos/codigo-projeto10-principal.jpg" alt="Código do Principal" class="desktop-only" />
         <button 
   	class="show-image-btn mobile-only" 
-  	data-img="../../images/codigos/codigo-projeto2-gamba.jpg">
+  	data-img="../../images/codigos/codigo-projeto10-principal.jpg">
   	Mostrar Código
         </button>
     </div>
     <div>
-      <h2>O Ator Gambá</h2>
-      <p>Começaremos com o código que controla o movimento do ator Gambá, que é bastante simples, visto que seu único movimento será pular, então utlizamos o bloco <a href="../../manual.html#quando-tocar" class="fundo-chave yellow">Quando Tocar</a> e em seguida o bloco <a href="../../manual.html#pule" class="fundo-chave green">Pule</a> 200, para que o Gambá consiga pular por cima do Cacto. Podemos também já definir a variável pontos, que irá contar quantos cactos o jogador conseguiu pular, fazemos isso colocando o bloco <a href="../../manual.html#quando-play" class="fundo-chave yellow">Quando Play</a> e conectando a ele o bloco <a href="../../manual.html#defina-variavel" class="fundo-chave cyan">Defina Variável</a> definindo os pontos como 0 e o bloco <a href="../../manual.html#mostre-variavel" class="fundo-chave cyan">Mostre Variável</a> ativado, para que os pontos apareçam na tela. A posição inicial do ator Gambá deve ser um pouco mais para a esquerda da tela, para que dê tempo de reagir ao movimento do cacto.</p>
+      <h2>O Ator Principal</h2>
+      <p>Comentários codigo do ator</p>
+    </div>
+  </section>
+
+    <section class="project-section">
+    <div class="image-wrapper">
+      <img src="../../images/codigos/codigo-projeto10-porta.jpg" alt="Código da Porta" class="desktop-only" />
+        <button 
+  	class="show-image-btn mobile-only" 
+  	data-img="../../images/codigos/codigo-projeto10-prota.jpg">
+  	Mostrar Código
+        </button>
+    </div>
+    <div>
+      <h2>O Ator Porta</h2>
+      <p>Comentários codigo do ator</p>
     </div>
   </section>
 
   <section class="project-section">
     <div class="image-wrapper">
-      <img src="../../images/codigos/codigo-projeto2-cacto.jpg" alt="Código do Cacto" class="desktop-only" />
+      <img src="../../images/codigos/codigo-projeto10-sentado.jpg" alt="Código do Sentado" class="desktop-only" />
         <button 
   	class="show-image-btn mobile-only" 
-  	data-img="../../images/codigos/codigo-projeto2-cacto.jpg"">
+  	data-img="../../images/codigos/codigo-projeto10-sentado.jpg">
   	Mostrar Código
         </button>
     </div>
     <div>
-      <h2>O Ator Cacto</h2>
-      <p>O código do ator Cacto será algo que sempre tem que estar ocorrendo, já que o cacto irá surgir, se mover até a parte esquerda da tela, sumir, retornar à posição inicial, aparecer e fazer tudo novamente, portanto podemos concluir que o código estará dentro de um loop <a href="../../manual.html#sempre" class="fundo-chave orange">Sempre</a>. Então colocaremos o bloco <a href="../../manual.html#quando-play" class="fundo-chave yellow">Quando Play</a> junto do bloco <a href="../../manual.html#sempre" class="fundo-chave orange">Sempre</a> e dentro dele iremos fazer o cacto se mover com o bloco <a href="../../manual.html#mude-variavel" class="fundo-chave cyan">Mude Variável</a> 300 para a esquerda, adicionar um ponto com o <a href="../../manual.html#pule" class="fundo-chave green">Puler</a> e depois esconder o cacto, fazendo ele retornar a posição inicial com o bloco <a href="../../manual.html#va-para" class="fundo-chave green">Vá Para</a> e um bloco <a href="../../manual.html#espere" class="fundo-chave orange">Espere</a> para que seja aleatório o tempo que o cacto irá começar seu movimento, então iremos mostrar ele com o bloco <a href="../../manual.html#mostre" class="fundo-chave purple">Mostre</a> e isso tudo se repetirá. Agora devemos fazer com que o jogo acabe quando o cacto encostar no gambá, para isso usaremos o bloco <a href="../../manual.html#quando-encostar" class="fundo-chave yellow">Quando Encostar</a> no ator Gambá junto com o bloco <a href="../../manual.html#pare" class="fundo-chave orange">Pare</a> tudo. A posição inicial do ator Cacto é bem perto da borda direita da tela.</p>
+      <h2>O Ator Sentado</h2>
+      <p>Comentários codigo do ator</p>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <div class="image-wrapper">
+      <img src="../../images/codigos/codigo-projeto10-frango.jpg" alt="Código do Frango" class="desktop-only" />
+        <button 
+  	class="show-image-btn mobile-only" 
+  	data-img="../../images/codigos/codigo-projeto10-frango.jpg">
+  	Mostrar Código
+        </button>
+    </div>
+    <div>
+      <h2>O Ator Frango</h2>
+      <p>Comentários codigo do ator</p>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <div class="image-wrapper">
+      <img src="../../images/codigos/codigo-projeto10-chave.jpg" alt="Código da Chave" class="desktop-only" />
+        <button 
+  	class="show-image-btn mobile-only" 
+  	data-img="../../images/codigos/codigo-projeto10-chave.jpg">
+  	Mostrar Código
+        </button>
+    </div>
+    <div>
+      <h2>O Ator Chave</h2>
+      <p>Comentários codigo do ator</p>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <div class="image-wrapper">
+      <img src="../../images/codigos/codigo-projeto10-osso.jpg" alt="Código do Osso" class="desktop-only" />
+        <button 
+  	class="show-image-btn mobile-only" 
+  	data-img="../../images/codigos/codigo-projeto10-osso.jpg">
+  	Mostrar Código
+        </button>
+    </div>
+    <div>
+      <h2>O Ator Osso</h2>
+      <p>Comentários codigo do ator</p>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <div class="image-wrapper">
+      <img src="../../images/codigos/codigo-projeto10-cachorro.jpg" alt="Código do Cachorro" class="desktop-only" />
+        <button 
+  	class="show-image-btn mobile-only" 
+  	data-img="../../images/codigos/codigo-projeto10-cachorro.jpg">
+  	Mostrar Código
+        </button>
+    </div>
+    <div>
+      <h2>O Ator Cachorro</h2>
+      <p>Comentários codigo do ator</p>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <div class="image-wrapper">
+      <img src="../../images/codigos/codigo-projeto10-texto.jpg" alt="Código do Texto" class="desktop-only" />
+        <button 
+  	class="show-image-btn mobile-only" 
+  	data-img="../../images/codigos/codigo-projeto10-texto.jpg">
+  	Mostrar Código
+        </button>
+    </div>
+    <div>
+      <h2>Os Atores Texto</h2>
+      <p>Comentários codigo do ator</p>
     </div>
   </section>
 
