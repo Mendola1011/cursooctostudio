@@ -85,11 +85,6 @@ html {
   align-items: center; 
 }
 
-.chapter-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 12px rgba(124, 58, 237, 0.2);
-}
-
 .chapter-card .chapter-image {
   width: 100%;
   height: auto;
