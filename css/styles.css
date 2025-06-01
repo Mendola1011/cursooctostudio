@@ -356,6 +356,35 @@ footer .social-links a:hover {
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
+.complexity-stars {
+  font-size: 1rem;
+  color: black;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.complexity-stars::before {
+  content: "Complexidade: ";
+  color: var(--color-text);
+}
+
+.complexity-stars.level-1::after {
+  content: "★";
+  color: gold;
+}
+
+.complexity-stars.level-2::after {
+  content: "★★";
+  color: gold;
+}
+
+.complexity-stars.level-3::after {
+  content: "★★★";
+  color: gold;
+}
+
 .futuro {
   max-width: 800px; 
   margin: 2rem auto;
