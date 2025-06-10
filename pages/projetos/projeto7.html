@@ -24,7 +24,7 @@
 
     <h1 class="main-title">Projeto 7 - Fruit Ninja</h1>
     <div class="chapter-intro">
-    <p>Introduçaõ</p>
+    <p>Neste projeto, vamos desenvolver um jogo inspirado no clássico Fruit Ninja, em que, utilizando toques na tela, as frutas, que aparecem aleatoriamente, são cortadas, enquanto tentamos evitar cortar os balões. Construiremos uma versão composta por 5 atores, a maçã, as duas metades da maçã, o balão e o corte. Vamos utilizar o bloco "vá para ator" para tentar fazer animações de corte na fruta e deixar o jogo esteticamente completo (bonito).</p>
     </div>
 
     <div class="intro-image-wrapper">
@@ -79,7 +79,9 @@
     </div>
     <div>
       <h2>O Ator Maçã</h2>
-      <p>Comentarios sobre o código</p>
+      <p>Começaremos com o bloco "quando play", definindo a variável pontos e definindo o tamanho da maçã para 70% e escondendo ela com o bloco "esconda". Para a movimentação do ator, vamos utilizar, dentro de um bloco "sempre", um bloco "vá para" com parametros aleatorios na coordenada x, mostrar a maçã e fazer ela se movimentar para cima e para baixo com o bloco "pule" também com o parametro aleatório seguido de um bloco "esconda" no final do movimento e um tempo de espera aleatório para a fruta surgir novamente, tudo isso para que o comportamento seja variado.</p>
+	  <p>Agora, quando tocarmos na maçã, sairá um som com o bloco "toque o som" aumentar a variável pontos em 1, desaperecer com a maçã para que ela cortada apareça e usar o bloco "transmita" com cortar para todos atores.</p>
+
     </div>
   </section>
 
@@ -94,7 +96,9 @@
     </div>
     <div>
       <h2>Os Atores Maçã Cortada</h2>
-      <p>Comentarios sobre o código</p>
+      <p>Para criar as metades das maçãs bsata apenas edita-las, apagando a parte de cima para um ator e apagando a parte de baixo para o outro. Começaremos com o código em comum dos dois atores, que é o bloco "quando play" seguido de um bloco "defina tamanho" em 70% e esconder o ator até o momento do corte, além de um bloco "esconda" para, no final do momento, a fruta cortada desaparecer quando encostar na borda.</p>
+	  <p>Faremos agora a movimentação para a animação do corte, com o bloco "quando receber" corte, faremos a fruta cortada ir até a maça com o bloco "va-para-ator" e mostrar ela (todos com a velocidade mais rápida) juntamente com o bloco "mova" para baixo para completarem o movimento. Para que a animação fique mais fluida, iremos fazer as metades cortadas ainda continuarem subindo um pouco com o bloco "pule", além de fazer a metade de cima ir para a esquerda e a metade de baixo ir para a direita com o bloco "mova", utilizando isso em 3 blocos "quando receber" separados para os movimentos serem simultâneos.</p>
+	 
     </div>
   </section>  
 
@@ -109,7 +113,8 @@
     </div>
     <div>
       <h2>O Ator Balão</h2>
-      <p>Comentarios sobre o código</p>
+      <p>Começaremos com o bloco "quando play", definindo o tamanho do balão para 90% e escondendo ele com o bloco "esconda". Para a movimentação do ator, vamos utilizar, dentro de um bloco "sempre", um bloco "vá para" com parametros aleatorios na coordenada x, mostrar o balão e fazer ele se movimentar para cima com o bloco "mova" seguido de um bloco "esconda" no final do movimento e um tempo de espera aleatório para o balão subir novamente.</p>
+	  <p>Agora basta fazer o jogo acabar quando tocarmos no balão, utilizando o bloco "quando tocar" seguido de um som, um balão de game over e o bloco "pare" tudo.</p>
     </div>
   </section>
 
@@ -125,7 +130,8 @@
     </div>
     <div>
       <h2>O Ator Corte</h2>
-      <p>Comentarios sobre o código</p>
+      <p>Para criar esse ator, apenas utilizamos um emoji qualquer, apagamos e desenhamos uma linha na mesma diagonal da separação entre as maçãs cortadas. Iremos começar com um bloco "quando play" definindo o tamanho do ator Corte e escondendo ele até a hora do corte.</p>
+	  <p>Já em relação ao movimento, utilizaremos o bloco "quando receber" cortar, fazendo o ator ir até a maçã, mostrando ele e fazendo o mesmo se mover na diagonal, para dar a impressão de uma animação de corte, escondendo ele após isso.</p>
     </div>
   </section>
 
@@ -133,9 +139,11 @@
 <section class="futuro">
   <h2>Para o Futuro</h2>
   <ul>
-    <li class="estrela-1">Implemente sons quando o ator colidir ou pontuar. (<a href="../../manual.html#toque-o-som" class="fundo-chave blue">Toque o Som</a>)</li>
     <li class="estrela-1">Faça que a pontuação seja mostrada na tela ao final do jogo. (<a href="../../manual.html#diga" class="fundo-chave blue">Diga</a>)</li>
-    <li class="estrela-2">Adicione novos obstáculos com diferentes comportamentos. </li>
+    <li class="estrela-2">Adicione novas frutas com diferentes comportamentos. </li>
+	<li class="estrela-2">Crie um sistema de vidas.</li>
+	<li class="estrela-2">Crie frutas especiais que valem mais pontos ou recuperam vidas.</li>
+	<li class="estrela-3">Implemente níveis de dificuldade dependendo de quantos pontos o jogador tiver, com frutas mais rápidas e menor tempo entre aparições.</li>
   </ul>
 </section> 
 
