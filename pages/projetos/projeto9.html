@@ -76,7 +76,7 @@
     </div>
     <div>
       <h2>O Ator Arma</h2>
-      <p>Começaremos com as informações iniciais da arma com o bloco "quando play" junto do "defina tamanho" e "Vá para", além de definir a variável "direção arma" como sendo a direção atual do ator Arma, visto que vamos precisar dessa informação nos atores Seta, mas ela não precisa aparecer na tela, então vamos esconde-la. Já para a movimentação do ator, vamos fazer por meio de "Transmita" no ator seta, utlizando então o bloco "quando receber" para cima e para baixo, junto do para cima iremos girar a arma no sentido horário e anti-horário no para baixo, após movimentar iremos atualizar a nossa variável "direção arma", com um transmita "atualizar direção" e um "quando receber" definir a variável como a nova direção. Ainda utilizaremos outra variável, que será definida em outro ator, que é a variável "pode atirar" que recebe 1 ou 0. Quando clicarmos na arma, ela verifica se podemos atirar com o bloco "se" e então transmite "disparar" para todos os atores.</p>
+      <p>Começaremos com as informações iniciais da arma com o bloco "quando play" junto do "defina tamanho" e "Vá para", além de definir a variável "direção arma" como sendo a direção atual do ator Arma, visto que vamos precisar dessa informação nos atores Seta, mas ela não precisa aparecer na tela, então vamos esconde-la. Já para a movimentação do ator, vamos fazer por meio de "Transmita" no ator seta, utilizando então o bloco "quando receber" para cima e para baixo, junto do para cima iremos girar a arma no sentido horário e anti-horário no para baixo, após movimentar iremos atualizar a nossa variável "direção arma", com um transmita "atualizar direção" e um "quando receber" definir a variável como a nova direção. Ainda utilizaremos outra variável, que será definida em outro ator, que é a variável "pode atirar" que recebe 1 ou 0. Quando clicarmos na arma, ela verifica se podemos atirar com o bloco "se" e então transmite "disparar" para todos os atores.</p>
     </div>
   </section>
 
@@ -91,7 +91,7 @@
     </div>
     <div>
       <h2>Os Atores Setas</h2>
-      <p>O código das setas será basicamente igual, utilizando um bloco Transmita para fazer a arma girar, portanto utilizaremos dois blocos "quando encostar" junto de blocos "transmita" com os blocos da seta para cima transmitindo "para cima" e os da para baixo transmitindo "para baixo", porém, faremos aqui o limite para a inclinação da arma, ou seja, utlizaremos o bloco "se" que fará a arma se movimentar para cima somente se a direção dela é menor que 180 graus, já no movimento para baixo, iremos deixar a arma se movimentar para baixo somente se a inclinação atual dela for maior que 0 graus. Iremos definir também as informações iniciais das setas com os blocos "quando play", "defina tamanho" e "vá para".</p>
+      <p>O código das setas será basicamente igual, utilizando um bloco Transmita para fazer a arma girar, portanto utilizaremos dois blocos "quando encostar" junto de blocos "transmita" com os blocos da seta para cima transmitindo "para cima" e os da para baixo transmitindo "para baixo", porém, faremos aqui o limite para a inclinação da arma, ou seja, utilizaremos o bloco "se" que fará a arma se movimentar para cima somente se a direção dela é menor que 180 graus, já no movimento para baixo, iremos deixar a arma se movimentar para baixo somente se a inclinação atual dela for maior que 0 graus. Iremos definir também as informações iniciais das setas com os blocos "quando play", "defina tamanho" e "vá para".</p>
     </div>
   </section>
 
@@ -107,7 +107,8 @@
     </div>
     <div>
       <h2>O Ator Água</h2>
-      <p>Comentarios sobre o código</p>
+      <p>Em relação ao ator Água, temos que sua inclinação terá que ser a mesma do ator arma, visto que o "tiro" sai na direção que a arma está apontada, então para mexer na inclinação do ator água, iremos utilizar também os blocos "quando receber" para baixo e para cima juntamente com os blocos "gire". Já para as informações iniciais do ator, usaremos os blocos "defina tamanho" e "vá para" dentro do bloco "quando play", e definiremos as variáveis "tiros" e "pode atirar" que usamos no ator arma, além disso temos um bloco "gire" 180 graus para alinhar a direção da arma com a da gota.</p>
+	  <p>Agora em relação ao ato de disparar, iremos utilizar o bloco "quando receber" disparar, que é ativado quando tocamos na arma, logo após o disparo iremos definir a variável "pode atirar" como 0, aumentar a quantidade de tiros em 1, mostrar a água e fazer ela avançar na direção que esta apontando com o bloco "avance". Precisamos então definir quando um tiro acerta ou não o fogo, quando o tiro não acerta o fogo ele irá acertar uma das bordas, então em um bloco "quando na borda" iremos esconder a água e levar ela de volta para a posição inicial com o bloco "vá para" e definir a variável pode atirar como 1 novamente, já quando a água encostar no ator fogo, iremos transmitir "tocou" para usarmos ele no ator fogo e esconder a água, levando ela para a posição inicial e transmitindo "mudar velocidade".</p>
     </div>
   </section>
 
@@ -122,7 +123,8 @@
     </div>
     <div>
       <h2>O Ator Fogo</h2>
-      <p>Comentarios sobre o código</p>
+      <p>A movimentação do fogo será dividida em fases, ou seja, a cada vez que o fogo for acertado ele irá mudar o seu comportamento, deixando mais difícil. Então iremos fazer com que o fogo comece somente indo para baixo, logo usaremos dentro de um bloco "sempre" um bloco "mova" para baixo, definindo também em qual "fase" estamos do movimento do fogo variável que definimos como "velocidade". Agora vamos fazer dois blocos, um bloco "quando receber" tocou, que terá o papel de parar o movimento da fase antiga, e o bloco "quando receber" mudar velocidade, que irá dar início ao movimento da próxima fase. O primeiro bloco irá esconder o fogo quando for acertado, mudar a "fase" aumentando a velocidade em 1 e utilizando o bloco "parar" outros blocos, que interrompe os códigos somente deste ator. Já o segundo bloco será uma série de blocos "se" que verificam em qual velocidade estamos e faz o fogo se comportar daquela maneira. No nosso exemplo, na fase 2 o bloco aumenta a velocidade e se movimenta na diagonal. Na fase 3 aumenta a velocidade mais uma vez e o movimento se torna aleatório, sendo possível também o fogo pular e "desviar" da água. Agora, a partir da velocidade 4 o jogo acaba com o bloco "toque o som" e o bloco "pare" tudo, mas podendo adicionar novas velocidades.</p>
+
     </div>
   </section>
 
@@ -132,7 +134,9 @@
   <ul>
     <li class="estrela-1">Implemente sons quando o ator colidir ou pontuar. (<a href="../../manual.html#toque-o-som" class="fundo-chave blue">Toque o Som</a>)</li>
     <li class="estrela-1">Faça que a pontuação seja mostrada na tela ao final do jogo. (<a href="../../manual.html#diga" class="fundo-chave blue">Diga</a>)</li>
-    <li class="estrela-2">Adicione novos obstáculos com diferentes comportamentos. </li>
+    <li class="estrela-2">Faça uma munição limitada, em que o jogo acaba quando ela acabar.</li>
+	<li class="estrela-3">Faça um sistema que conta o tempo que você demorou para terminar o jogo.</li>
+	<li class="estrela-3">Faça obstaculos que passam entre a arma e o fogo.</li>
   </ul>
 </section> 
 
