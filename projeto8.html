@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto 8 - Ping Pong</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+
+
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Menu principal">
+      <ul>
+        <li><a href="../../index.html">Início</a></li>
+        <li><a href="../../orientacoes.html">Orientações</a></li>
+        <li><a href="../../sobre.html">Sobre</a></li>
+        <li><a href="../../manual.html">Manual Octostudio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <h1 class="main-title">Projeto 8 - Ping Pong</h1>
+    <div class="chapter-intro">
+    <p>Neste projeto, vamos desenvolver um jogo de ping pong em que o objetivo é não deixar a bolinha cair, obtendo o máximo de pontos movimentando a plataforma, para tentar controlar a bola com colisões e rebotes.</p>
+    <p>A mecânica do jogo é muito simples, temos uma plataforma retangular que deverá ser movida para a direita e para a esquerda para não deixar a bola cair, os comandos para movimentar a plataforma já foram utilizados em diversos projetos. A única coisa um pouco mais complexa do projeto é entender como funcionam as colisões na borda e na plataforma e utilizar o bloco "gire" para que elas se comportem do jeito certo.</p>
+    </div>
+
+    <div class="intro-image-wrapper">
+    <div class="intro-image">
+    <img src="../../images/projetos/projeto8.jpg" alt="Imagem Projeto 8">
+    </div>
+    </div>
+
+    <div class="download-button">
+    <a href="../../jogos/projetos/projeto8.octostudio" download class="btn">Baixar Jogo (Ping Pong)</a>
+    </div>
+   
+<section class="project-section blocos-utilizados">
+  <h2>Blocos Utilizados</h2>
+  <ul class="blocos-lista">
+    <li><a href="../../manual.html#quando-play" class="fundo-chave yellow">Quando Play</a></li>
+    <li><a href="../../manual.html#quando-tocar" class="fundo-chave yellow">Quando Tocar</a></li>
+    <li><a href="../../manual.html#quando-na-borda" class="fundo-chave yellow">Quando na Borda</a></li>
+    <li><a href="../../manual.html#quando-encostar" class="fundo-chave yellow">Quando Encostar</a></li>
+    <li><a href="../../manual.html#gire" class="fundo-chave green">Gire</a></li>
+    <li><a href="../../manual.html#va-para" class="fundo-chave green">Vá Para</a></li>
+    <li><a href="../../manual.html#avance" class="fundo-chave green">Avance</a></li>
+    <li><a href="../../manual.html#defina-tamanho" class="fundo-chave purple">Defina Tamanho</a></li>
+    <li><a href="../../manual.html#sempre" class="fundo-chave orange">Sempre</a></li>
+    <li><a href="../../manual.html#pare" class="fundo-chave orange">Pare</a></li>
+    <li><a href="../../manual.html#transmita" class="fundo-chave orange">Transmita</a></li>
+    <li><a href="../../manual.html#quando-receber" class="fundo-chave orange">Quando Receber</a></li>
+    <li><a href="../../manual.html#defina-variavel" class="fundo-chave cyan">Defina Variável</a></li>
+    <li><a href="../../manual.html#mude-variavel" class="fundo-chave cyan">Mude Variável</a></li>
+    <li><a href="../../manual.html#informacao" class="fundo-chave cyan">Informação</a></li>
+    <li><a href="../../manual.html#aleatorio" class="fundo-chave cyan">Aleatório</a></li>
+    <li><a href="../../manual.html#operacao" class="fundo-chave cyan">Operação</a></li>
+  </ul>
+</section>
+
+  <section class="project-section">
+    <div class="image-wrapper">
+      <img src="../../images/codigos/codigo-projeto8-plataforma.jpg" alt="Código da Plataforma" class="desktop-only" />
+        <button 
+  	class="show-image-btn mobile-only" 
+  	data-img="../../images/codigos/codigo-projeto8-plataforma.jpg">
+  	Mostrar Código
+        </button>
+    </div>
+    <div>
+      <h2>O Ator Plataforma</h2>
+      <p>Começaremos com o código que controla o movimento do ator Plataforma, temos 2 blocos Quando Receber que serão acionados por blocos Transmita que serão criados nos Atores Setas, portanto quando o ator receber “esquerda” irá se mover para esquerda e quando receber “direita” irá se mover para a direita. Além disso, para que ele não consiga sair da tela, faremos com que ele seja movido para a direita caso encoste na borda esquerda e ser movido para esquerda caso encoste na borda direita. Juntamente com isso teremos um bloco "quando play" para definir o tamanho inicial da plataforma e mover ela para a metade da tela e na altura certa, além de iniciar a variável "pontos".</p>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <div class="image-wrapper">
+      <img src="../../images/codigos/codigo-projeto8-seta.jpg" alt="Código das Setas" class="desktop-only" />
+        <button 
+  	class="show-image-btn mobile-only" 
+  	data-img="../../images/codigos/codigo-projeto8-seta.jpg">
+  	Mostrar Código
+        </button>
+    </div>
+    <div>
+      <h2>Os Atores Setas</h2>
+      <p>O código das setas será basicamente igual, utilizando um bloco Transmita para fazer a flor se movimentar, portanto utilizaremos dois blocos "quando encostar" junto de blocos "transmita" com os blocos da seta esquerda transmitindo "esquerda" e os da direita transmitindo "direita". Já para definir o tamanho e posição inicial dos atores, utilizaremos um bloco "quando play" juntamente de um bloco "defina tamanho" e o bloco "vá para".</p>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <div class="image-wrapper">
+      <img src="../../images/codigos/codigo-projeto8-bola.jpg" alt="Código da Bola" class="desktop-only" />
+        <button 
+  	class="show-image-btn mobile-only" 
+  	data-img="../../images/codigos/codigo-projeto8-bola.jpg">
+  	Mostrar Código
+        </button>
+    </div>
+    <div>
+      <h2>O Ator Bola</h2>
+      <p>Começaremos com o código das informações iniciais do ator, utilizando um bloco "quando play" junto de um "defina tamanho" e um bloco gire com parâmetro aleatório, para que a bola comece em uma direção aleatória no começo do jogo, seguido de um bloco "sempre" em que a bola irá sempre se mover na direção em que está apontada, ou seja, usaremos o bloco "avance". O jogo irá acabar quando a bola encostar na borda de baixo, visto que não teriamos conseguido pegar a bolinha, logo usaremos um bloco "quando encostar" na borda debaixo e o bloco "pare" tudo.</p>
+	  <p>Agora iremos fazer o código das colisões da bola, ou seja, como a bola vai se comportar depois de encostar na borda de cima, nas bordas laterais e no ator Plataforma. Começando com a borda de cima, temos que a bola terá que girar no sentido horário (180 - 2 x Seu angulo atual), logo iremos utilizar, dentro do bloco "quando encostar" na borda de cima, um bloco "gire" no sentido horário juntamente com dois blocos "operação", um que faz 180 menos algo e outro que faz 2 vezes um bloco "informação" de direção atual da bola.</p>
+	  <p>Já a colisão das bordas laterais terá que girar a bola em (2 x angulo atual) no sentido anti horário, (mesma coisa que girar -2 x angulo atual no sentido horário), então para padronizar o sentido iremos fazer a mesma coisa que fizemos antes, porém com um 0 no lugar do 180. Já na colisão com o ator Plataforma, iremos utilizar a mesma fórmula que usamos para a borda de cima, porém, para o jogo não ficar muito previsível, usaremos um bloco somando ao ângulo uma quantia pequena aleatória, e depois de encostar no ator Plataforma usaremos o bloco "mude variável" aumentando a variável "pontos" em 1.</p>
+	  
+    </div>
+  </section>
+
+
+
+<section class="futuro">
+  <h2>Para o Futuro</h2>
+  <ul>
+    <li class="estrela-1">Implemente sons quando o ator colidir ou pontuar. (<a href="../../manual.html#toque-o-som" class="fundo-chave blue">Toque o Som</a>)</li>
+    <li class="estrela-1">Faça que a pontuação seja mostrada na tela ao final do jogo. (<a href="../../manual.html#diga" class="fundo-chave blue">Diga</a>)</li>
+	<li class="estrela-2">Faça a Plataforma se mover com a inclinação do celular. </li>
+    <li class="estrela-2">Faça a Plataforma diminuir de tamanho quando os pontos forem aumentando. </li>
+	<li class="estrela-3">Aumente a velocidade da bola quando os pontos aumentarem.</li>
+  </ul>
+</section> 
+
+
+</main>
+
+  <footer>
+    <p>Todo o material está disponível gratuitamente e sob licença Creative Commons CC BY-SA.</p>
+  </footer>
+
+<a href="#" class="back-to-top" aria-label="Voltar ao topo">↑</a>
+
+<div class="lightbox-overlay" id="lightbox">
+  <button class="lightbox-close" id="lightbox-close">&times;</button>
+  <img id="lightbox-img" src="" alt="Imagem em destaque">
+</div>
+
+<script src="../../lib/script.js"></script>
+</body>
+</html>
