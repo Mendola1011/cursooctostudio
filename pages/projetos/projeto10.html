@@ -24,7 +24,8 @@
 
     <h1 class="main-title">Projeto 10 - Escape Room</h1>
     <div class="chapter-intro">
-    <p>Introdução</p>
+    <p>Neste projeto, vamos desenvolver um pequeno jogo de fuga, no estilo escape room, em que devemos tentar interagir com os objetos da sala para encontrar uma maneira de sair e completar o jogo. A versão será composta por diversos atores, em que o ator principal terá que interagir com os mesmos para conseguir progredir nas fases. Para isso, utilizaremos algo que na programação é chamado de variável booleana, que é um tipo  de variável que só pode armazenar dois valores: verdadeiro (true) ou falso (false), ou no nosso caso, 0 (falso) e 1 (verdadeiro). Esse jogo será pautado inteiramente nesse tipo de variável, já que conseguimos verificar se algo já aconteceu ou não, por exemplo se a variável "abriu porta?" é igual a 0 significa que ela ainda não está aberta.</p>
+	<p>Aprenderemos também a usar dois novos blocos, o bloco "Mude Cenário" que é utilizado para mudar o cenário de fundo do jogo e o bloco "Quando Mudar" que executa um bloco de códigos quando um cenário específico aparece. Para esse jogo teremos 4 cenários, cenário 1 é uma tela preta (tela de início), cenário 2 é a parte de dentro da casa, cenário 3 a parte de fora da casa e o cenário 4 mais uma tela preta (tela de fim de jogo).</p>
     </div>
 
     <div class="intro-image-wrapper">
@@ -58,6 +59,7 @@
     <li><a href="../../manual.html#pare" class="fundo-chave orange">Pare</a></li>
     <li><a href="../../manual.html#transmita" class="fundo-chave orange">Transmita</a></li>
     <li><a href="../../manual.html#quando-receber" class="fundo-chave orange">Quando Receber</a></li>
+	<li><a href="../../manual.html#incline-para-mover" class="fundo-chave cyan">Incline para Mover</a></li>
     <li><a href="../../manual.html#defina-variavel" class="fundo-chave cyan">Defina Variável</a></li>
     <li><a href="../../manual.html#mude-variavel" class="fundo-chave cyan">Mude Variável</a></li>
     <li><a href="../../manual.html#variavel" class="fundo-chave cyan">Variável</a></li>
@@ -76,7 +78,7 @@
     </div>
     <div>
       <h2>O Ator Principal</h2>
-      <p>Comentários codigo do ator</p>
+      <p>Começaremos com o código das informações iniciais do ator, usando os blocos "defina tamanho", "va para", "organize" para ficar na frente de todos e o bloco "incline para mover". Usaremos então um bloco "quando play" para colocar o cenário 1, esperar um tempo e mudar para o cenário 2, usando também um bloco "quando play" para criar 3 variáveis booleanas e defini-las como 0, além de esconder todas com o bloco "mostre variável". Agora vamos controlar onde o ator aparece quando trocamos de cenário, utlizando então 3 blocos "quando mudar". No cenário 2, se o ator já saiu da casa, quando ele voltar aparecerá nessa posição, no cenário 3 irá aparecer naquela posição e no cenário 4 (fim do jogo) ele irá esconder.</p>
     </div>
   </section>
 
@@ -91,7 +93,7 @@
     </div>
     <div>
       <h2>O Ator Porta</h2>
-      <p>Comentários codigo do ator</p>
+      <p>No ator Porta também teremos 3 tipos diferentes de blocos, os blocos "quando mudar" para controlar o comportamento da porta quando trocarmos de cenário, o bloco "quando play" para criar a variável onde (0 se estiver dentro da casa e 1 se estiver fora) e esconder a porta na tela inicial e o bloco "quando encostar" que controla a interação do ator principal com a porta. O bloco "quando play" é bem simples, já nos blocos "quando mudar" iremos definir o tamanho da porta e definir sempre a variável onde como 0 ou 1, sendo 0 no cenário 2 e 1 no cenário 3, também esconderemos a porta na tela de fim de jogo (cenário 4). Agora o principal é a interação do ator Principal com a porta, temos que quando encostar na porta a variável "conferiu porta?" recebe 1 (verdadeiro) e se ele estiver com a chave ("pegou chave" = 1) então transmitiremos sair para todos atores e se o personagem estiver dentro (onde = 0) muda o cenário para fora e vice-versa, agora se ("pegou chave" = 0) apenas fala que a porta esta trancada com o bloco "diga".</p>
     </div>
   </section>
 
@@ -106,7 +108,7 @@
     </div>
     <div>
       <h2>O Ator Sentado</h2>
-      <p>Comentários codigo do ator</p>
+      <p>O ator Sentado é o ator que dará a chave para o ator Principal quando o mesmo entregar para ele o frango, então faremos os mesmos 3 tipos de blocos, o bloco "quando play" que irá esconder o ator na tela de início de jogo, o bloco "quando mudar" que irá definir o tamanho do ator, colocando ele na posição certa com o bloco "vá para" e mostrando ele se o ator principal não saiu de casa (visto que quando o ator Principal sair o Sentado não precisa mais aparecer). Por último o bloco "quando encostar" que irá controlar a interação do Sentado com o ator Principal, quando eles se encostarem e o Principal não estiver com o Frango (Pegou Frango? = 0) o ator apenas falará que está com fome com o bloco "diga", agora, se Pegou Frango? = 1, o ator irá agradecer e transmitir "comeu" para todos os atores, e depois desaperecer até o final do jogo.</p>
     </div>
   </section>
 
@@ -121,7 +123,7 @@
     </div>
     <div>
       <h2>O Ator Frango</h2>
-      <p>Comentários codigo do ator</p>
+      <p>Em relação ao ator Frango, também teremos os mesmos 3 tipos de blocos, o bloco "quando play" que irá esconder o ator na tela de início de jogo, o bloco "quando mudar" que irá definir o tamanho do ator, colocando ele na posição certa com o bloco "vá para" e mostrando ele se o ator principal ainda não tiver pegado o frango. Por fim, dois blocos "quando encostar" um bloco quando o frango encostar no ator Sentado, então ele irá desaperecer até o final do jogo com os blocos "esconda" e "pare" outros blocos, e um bloco "quando encostar" no principal, que irá verificar se ele já conferiu a porta e conferiu se o ator sentado esta com fome, se isso tiver acontecido então ele "pega" o frango, mudando a variável "pegou frango?" para 1, colocando o frango na frente com o bloco "organize" e fazendo ele se mover junto com o principal com o bloco "sempre" e "vá para (Ator)".</p>
     </div>
   </section>
 
@@ -136,7 +138,7 @@
     </div>
     <div>
       <h2>O Ator Chave</h2>
-      <p>Comentários codigo do ator</p>
+      <p>Em relação ao ator Chave, teremos 4 tipos de blocos, o bloco "quando play" que irá esconder o ator na tela de início de jogo e iniciar a variável pegou chave?, o bloco "quando mudar" que irá definir o tamanho do ator, colocando ele na posição certa com o bloco "vá para" e mostrando ele se o ator principal ainda não tiver saido (visto que quando o ator sair a chave irá desaparecer até o fim do jogo). Logo após, teremos um bloco "quando encostar" no principal, que irá verificar se ele já conferiu a porta e conferiu se o ator sentado esta com fome, se isso tiver acontecido então ele "pega" a chave, mudando a variável "pegou chave?" para 1, colocando a chave na frente com o bloco "organize" e fazendo ela se mover junto com o principal com o bloco "sempre" e "vá para (Ator)". Por fim, teremos dois blocos "quando receber" que irão receber os sinais "abriu" e "comeu" que criamos anteriormente, quando receber "abriu" não precisaremos mais da chave e quando receber "comeu" se não tiver pego a chave ainda, irá mostrar a chave.</p>
     </div>
   </section>
 
@@ -151,7 +153,7 @@
     </div>
     <div>
       <h2>O Ator Osso</h2>
-      <p>Comentários codigo do ator</p>
+      <p>Em relação ao ator Osso, teremos 4 tipos de blocos, o bloco "quando play" que irá esconder o ator na tela de início de jogo e iniciar as variáveis saiu e pegou osso?, os blocos "quando mudar" serão dividios em cenário 2 e cenário 3, no cenário 2 (dentro) iremos definir o tamanho do ator, colocando ele na posição certa com o bloco "vá para" e o bloco gire, mas não mostraremos ele ainda (somente com o bloco "quando receber" comeu), caso já tenhamos pego o osso, iremos esconde-lo também, já no cenário 3 será o contrário, se não tivermos pego o osso (pegou osso? = 0) iremos esconder ele, também esconderemos o osso na tela do final do jogo (cenário 4). Logo após, teremos um bloco "quando encostar" no principal, que irá verificar se ele já saiu, se isso tiver acontecido então ele "pega" a osso, mudando a variável "pegou osso?" para 1, colocando o osso na frente com o bloco "organize" e fazendo ele se mover junto com o principal com o bloco "sempre" e "vá para (Ator)". Teremos também um bloco "quando encostar" no cachorro, que irá fazer o osso desaparecer e parar os outros blocos. Por fim, teremos um blocos "quando receber" que irá receber "comeu", que criamos anteriormente, msotrando então o osso se não tiver pegado ele ainda (pegou osso? = 0).</p>
     </div>
   </section>
 
@@ -166,7 +168,7 @@
     </div>
     <div>
       <h2>O Ator Cachorro</h2>
-      <p>Comentários codigo do ator</p>
+      <p>Temos que o código do ator Cachorro é muito simples, visto que ele só aparece no cenário 3, então teremos vários blocos seguidos de um bloco "esconda" para esconde-lo nos outros 3 cenários. Para finalizar o jogo, teremos que entregar o osso para o cachorro, então teremos um bloco "quando encostar" em que o cachorro irá fazer cara de triste se não tivermos o osso e irá tocar um som e dizer algo caso estivermos com o osso, mudando então para o cenário 4 (Fim do jogo).</p>
     </div>
   </section>
 
@@ -181,16 +183,16 @@
     </div>
     <div>
       <h2>Os Atores Texto</h2>
-      <p>Comentários codigo do ator</p>
+      <p>Os atores Texto irão apenas aparecer no cenário 1 e no cenário 4, o texto que aparecerá no cenário 1 é "Objetivo: Saia de Casa", podemos então definir seu tamanho e coloca-lo no centro da tela, esperamos 1 segundo e fazemos ele desaparecer até o fim do jogo. Já o texto que aparecerá no cenário 4 é "Parabéns! Você concluiu o Jogo" que irá aparecer somente quando mudarmos para o cenário 4, então mostraremos o texto e encerraremos o jogo com o bloco "pare" tudo.</p>
     </div>
   </section>
 
 <section class="futuro">
   <h2>Para o Futuro</h2>
   <ul>
-    <li class="estrela-1">Implemente sons quando o ator colidir ou pontuar. (<a href="../../manual.html#toque-o-som" class="fundo-chave blue">Toque o Som</a>)</li>
-    <li class="estrela-1">Faça que a pontuação seja mostrada na tela ao final do jogo. (<a href="../../manual.html#diga" class="fundo-chave blue">Diga</a>)</li>
-    <li class="estrela-2">Adicione novos obstáculos com diferentes comportamentos. </li>
+    <li class="estrela-1">Implemente sons quando o ator pegar objetos ou abrir portas. (<a href="../../manual.html#toque-o-som" class="fundo-chave blue">Toque o Som</a>)</li>
+    <li class="estrela-2">Faça um limite de tempo para completar o jogo.</li>
+    <li class="estrela-3">Adicione novos obstáculos/fases.</li>
   </ul>
 </section> 
 
