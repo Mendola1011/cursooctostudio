@@ -24,8 +24,8 @@
 
     <h1 class="main-title">Projeto 11 - Aventura na Masmorra</h1>
     <div class="chapter-intro">
-    <p>Neste projeto, vamos desenvolver um jogo similar ao que é mostrado no navegador Chrome quando o dispositivo está desconectado, teremos um gambá que deve pular os cactos que vem em sua direção.</p>
-    <p>Introdução</p>
+    <p>Neste projeto, vamos desenvolver um jogo em que o personagem principal Herói explora uma masmorra, enfrentando diferentes obstáculos e inimigos como fogo, raio, zumbis e um Chefão final para vencer o jogo. Para isso usaremos o conceito de fases, ou seja, a cada fase que o jogador for passando, utilizaremos os blocos <a href="../../manual.html#transmita" class="fundo-chave orange">Transmita</a> e <a href="../../manual.html#quando-receber" class="fundo-chave orange">Quando Receber</a> para mudar o comportamento dos inimigos de acordo com a fase.</p>
+	<p>Por se tratar do último jogo deste material, as explicações serão menos detalhadas e focaremos mais no funcionamento geral de cada personagem.</p>
     </div>
 
     <div class="intro-image-wrapper">
@@ -81,7 +81,7 @@
     </div>
     <div>
       <h2>O Ator Herói</h2>
-      <p>Começaremos com o código que controla o movimento do ator</p>
+      <p>Começaremos com o código das informações iniciais do ator Herói, usando os blocos <a href="../../manual.html#defina-tamanho" class="fundo-chave purple">Defina Tamanho</a>, <a href="../../manual.html#va-para" class="fundo-chave green">Vá Para</a> e definindo a variável vida, além de usar um bloco <a href="../../manual.html#sempre" class="fundo-chave orange">Sempre</a> para verificar se a vida do ator chegou a zero. Para a movimentação do ator teremos 4 blocos <a href="../../manual.html#quando-receber" class="fundo-chave orange">Quando Receber</a> que serão acionados por blocos <a href="../../manual.html#transmita" class="fundo-chave orange">Transmita</a> nos atores Setas, também faremos com que o ator volte para a posição inicial caso tente sair da tela. Para completar iremos tocar um som quando o ator encostar na chave e usaremos um bloco <a href="../../manual.html#quando-receber" class="fundo-chave orange">Quando Receber</a> dano, que cada vez que o ator for atingido irá tirar uma vida, tocar um som, e mandar ele para a posição inicial.</p>
     </div>
   </section>
 
@@ -96,7 +96,7 @@
     </div>
     <div>
       <h2>Os Atores Setas</h2>
-      <p>Começaremos com o código que controla o movimento do ator</p>
+      <p>O código das setas será basicamente igual, utilizando um bloco <a href="../../manual.html#transmita" class="fundo-chave orange">Transmita</a> para fazer o Herói se movimentar, começaremos com as informações iniciais de todos os atores, como o bloco <a href="../../manual.html#defina-tamanho" class="fundo-chave purple">Defina Tamanho</a> e <a href="../../manual.html#va-para" class="fundo-chave green">Vá Para</a>, além de um bloco <a href="../../manual.html#quando-tocar" class="fundo-chave yellow">Quando Tocar</a> juntamente do bloco <a href="../../manual.html#transmita" class="fundo-chave orange">Transmita</a> (cima, baixo, direita ou esquerda).</p>
     </div>
   </section>
 
@@ -111,7 +111,7 @@
     </div>
     <div>
       <h2>O Ator Chave</h2>
-      <p>Começaremos com o código que controla o movimento do ator</p>
+      <p>Começaremos com as informações iniciais do ator Chave com os blocos <a href="../../manual.html#defina-tamanho" class="fundo-chave purple">Defina Tamanho</a> e <a href="../../manual.html#va-para" class="fundo-chave green">Vá Para</a>, iniciando também a variável fase e escondendo ela. Agora faremos o bloco responsável pela troca de fases, quando o ator Herói encostar na chave, iremos aumentar a fase em 1 e utilizaremos vários blocos <a href="../../manual.html#se" class="fundo-chave orange">Se</a> para verificar qual a fase atual, juntamente com um bloco <a href="../../manual.html#transmita" class="fundo-chave orange">Transmita</a> para informar os outros atores qual a fase atual. Também teremos um bloco esconda na última fase porque a chave não é necessária no Chefão Final.</p>
     </div>
   </section>  
 
@@ -126,7 +126,7 @@
     </div>
     <div>
       <h2>O Ator Fogo 1</h2>
-      <p>Começaremos com o código que controla o movimento do ator</p>
+      <p>Em relação aos atores Fogo, seu código será bem parecido, porém cada um terá sua posição correta, sendo isso o que os diferencia, portanto separamos cada um deles para que a imagem do código ficasse mais legível. O código será separado em 3 partes: as informações iniciais, o comportamento nas fases e o comportamento no Chefão Final. Começaremos com os blocos <a href="../../manual.html#defina-tamanho" class="fundo-chave purple">Defina Tamanho</a> e <a href="../../manual.html#va-para" class="fundo-chave green">Vá Para</a> além de também definir que o ator Herói tomará dano quando encostar no Fogo, logo após teremos seu comportamento dependendo de qual fase estamos, sendo um simples bloco <a href="../../manual.html#esconda" class="fundo-chave purple">Esconda</a> em fases que ele não aparece e um bloco <a href="../../manual.html#va-para" class="fundo-chave green">Vá Para</a> para as fases em que ele aparece. Já na ultima fase ele será usado como o ataque do boss, portanto ele irá se mover quando receber "ataque cobra".</p>
     </div>
   </section>
 
@@ -141,7 +141,7 @@
     </div>
     <div>
       <h2>O Ator Fogo 2</h2>
-      <p>Começaremos com o código que controla o movimento do ator</p>
+      <p>O código será separado em 3 partes: as informações iniciais, o comportamento nas fases e o comportamento no Chefão Final. Começaremos com os blocos <a href="../../manual.html#defina-tamanho" class="fundo-chave purple">Defina Tamanho</a> e <a href="../../manual.html#va-para" class="fundo-chave green">Vá Para</a> além de também definir que o ator Herói tomará dano quando encostar no Fogo, logo após teremos seu comportamento dependendo de qual fase estamos, sendo um simples bloco <a href="../../manual.html#esconda" class="fundo-chave purple">Esconda</a> em fases que ele não aparece e um bloco <a href="../../manual.html#va-para" class="fundo-chave green">Vá Para</a> para as fases em que ele aparece. Já na ultima fase ele será usado como o ataque do boss, portanto ele irá se mover quando receber "ataque cobra".</p>
     </div>
   </section>
 
@@ -156,7 +156,7 @@
     </div>
     <div>
       <h2>O Ator Fogo 3</h2>
-      <p>Começaremos com o código que controla o movimento do ator</p>
+      <p>O código será separado em 3 partes: as informações iniciais, o comportamento nas fases e o comportamento no Chefão Final. Começaremos com os blocos <a href="../../manual.html#defina-tamanho" class="fundo-chave purple">Defina Tamanho</a> e <a href="../../manual.html#va-para" class="fundo-chave green">Vá Para</a> além de também definir que o ator Herói tomará dano quando encostar no Fogo, logo após teremos seu comportamento dependendo de qual fase estamos, sendo um simples bloco <a href="../../manual.html#esconda" class="fundo-chave purple">Esconda</a> em fases que ele não aparece e um bloco <a href="../../manual.html#va-para" class="fundo-chave green">Vá Para</a> para as fases em que ele aparece. Já na ultima fase ele será usado como o ataque do boss, portanto ele irá se mover quando receber "ataque cobra".</p>
     </div>
   </section>
 
@@ -171,7 +171,7 @@
     </div>
     <div>
       <h2>O Ator Zumbi</h2>
-      <p>Começaremos com o código que controla o movimento do ator</p>
+      <p>Diferente do ator Fogo, o ator Zumbi terá apenas 2 tipos de bloco, visto que ele não aparecerá mais na última fase, tendo apenas as informações iniciais e o comportante durante cada fase. O diferencial do comportamento do Ator Zumbi é que ele se move, diferentemente do fogo que era estático, portanto em cada fase ele irá se mover repetidamente seguindo um trajeto, por isso usaremos os blocos <a href="../../manual.html#mova" class="fundo-chave green">Mova</a> e <a href="../../manual.html#espere" class="fundo-chave orange">Espere</a> dentro de um bloco <a href="../../manual.html#sempre" class="fundo-chave orange">Sempre</a>. Teremos então os blocos <a href="../../manual.html#defina-tamanho" class="fundo-chave purple">Defina Tamanho</a> e <a href="../../manual.html#va-para" class="fundo-chave green">Vá Para</a> além de também definir que o ator Herói tomará dano quando encostar no Zumbi, logo após teremos seu comportamento dependendo de qual fase estamos, sendo um simples bloco <a href="../../manual.html#esconda" class="fundo-chave purple">Esconda</a> em fases que ele não aparece e um conjunto de blocos para fazer ele se movimentar em um trajeto cíclico, escondendo ele na última fase porque não aparece no Chefão Final.</p>
     </div>
   </section>
 
@@ -186,7 +186,7 @@
     </div>
     <div>
       <h2>O Ator Nuvem</h2>
-      <p>Começaremos com o código que controla o movimento do ator</p>
+      <p>Em relação ao ator Nuvem e ao ator Raio, iremos utilizá-los para fazer outro tipo de inimigo, um inimigo com comportamento aleatório em que o ator nuvem irá piscar e tocar um som avisando que uma das fileiras receberá um raio, fazendo com que o ator Herói tenha que se mover. Portanto colocaremos o bloco <a href="../../manual.html#defina-tamanho" class="fundo-chave purple">Defina Tamanho</a> e definiremos uma variável "altura" que receberá 1, 2 ou 3, para indicar onde a nuvem deve aparecer e o Raio, esses atores só aparecerão na fase 3 para frente, logo, quando estivermos na fase 3 para frente, teremos um bloco <a href="../../manual.html#sempre" class="fundo-chave orange">Sempre</a>, a variavel recebendo um valor aleatório e vários blocos <a href="../../manual.html#se" class="fundo-chave orange">Se</a> para verificar qual valor foi recebido, juntamente com blocos <a href="../../manual.html#mova" class="fundo-chave green">Mova</a> para posicionar a nuvem, tocar um som de trovão, mostrando ela e desaparecendo logo em seguida.</p>
     </div>
   </section>
 
@@ -201,7 +201,7 @@
     </div>
     <div>
       <h2>O Ator Raio</h2>
-      <p>Começaremos com o código que controla o movimento do ator</p>
+      <p>O comportamento do ator Raio irá completar o que acabamos de fazer no ator Nuvem, ou seja, dependendo de qual for o valor da váriavel, o ator raio irá varrer aquela linha toda, utilizando um bloco <a href="../../manual.html#sempre" class="fundo-chave orange">Sempre</a>, um bloco <a href="../../manual.html#espere" class="fundo-chave orange">Espere</a> para dar tempo de sortear a variável e vários blocos <a href="../../manual.html#se" class="fundo-chave orange">Se</a> para verificar qual valor foi recebido, além de fazer o raio se mover do canto direito da tela até o canto esquerda. Lembrando também de usar o bloco <a href="../../manual.html#defina-tamanho" class="fundo-chave purple">Defina Tamanho</a>, e usar o bloco <a href="../../manual.html#quando-encostar" class="fundo-chave yellow">Quando Encostar</a> para que o ator Herói receba dano se encostar no raio.</p>
     </div>
   </section>
 
@@ -216,7 +216,7 @@
     </div>
     <div>
       <h2>O Ator Cobra</h2>
-      <p>Começaremos com o código que controla o movimento do ator</p>
+      <p>O ator Cobra será o chefão final do nosso jogo, em que o ator conseguirá dar dano nele pegando as espadas que se encontram no chão. Para isso utilizaremos os blocos <a href="../../manual.html#defina-tamanho" class="fundo-chave purple">Defina Tamanho</a> e <a href="../../manual.html#va-para" class="fundo-chave green">Vá Para</a> para as informações iniciais e também definir a variável "cobra" que será a vida do chefe, além de também definir o dano quando a cobra encostar no ator Héroi. O ator Cobra apenas aparecerá na última fase (fase 5) e também terá um ataque especial a cada 4 segundos, em que ele irá avisar com um som e transmitir ataque cobra (para os atores fogo) e também pular, atacando assim no norte, sul, leste e oeste, também faremos uma animação para que o ator "pisque" quando receber dano.</p>
     </div>
   </section>
 
@@ -231,7 +231,7 @@
     </div>
     <div>
       <h2>O Ator Espada</h2>
-      <p>Começaremos com o código que controla o movimento do ator</p>
+      <p>No ator Espada, teremos o código que irá diminuir a vida do ator Cobra, e também o código que irá ficar mudando a espada de posição a cada vez que o ator pegar ela. Portanto, teremos as informações iniciais com os blocos <a href="../../manual.html#defina-tamanho" class="fundo-chave purple">Defina Tamanho</a> e <a href="../../manual.html#va-para" class="fundo-chave green">Vá Para</a>, além de um bloco <a href="../../manual.html#quando-encostar" class="fundo-chave yellow">Quando Encostar</a> no ator Herói que irá transmitir "dano cobra", tocar um som e diminuir a vida da cobra em 1, além de transmitir algo que chamamos de "muda" que irá mudar a posição da espada, dependendo da vida do chefe final. Então, no último bloco, teremos diversos blocos <a href="../../manual.html#se" class="fundo-chave orange">Se</a> que irão verificar qual a vida da cobra e então posicionar a espada em outro local, quando a vida da cobra chegar a 0 o jogador terá ganhado o jogo, então tocaremos um som e pararemos o jogo.</p>
     </div>
   </section>
 
@@ -239,9 +239,10 @@
 <section class="futuro">
   <h2>Para o Futuro</h2>
   <ul>
-    <li class="estrela-1">Implemente sons quando o ator colidir ou pontuar. (<a href="../../manual.html#toque-o-som" class="fundo-chave blue">Toque o Som</a>)</li>
-    <li class="estrela-1">Faça que a pontuação seja mostrada na tela ao final do jogo. (<a href="../../manual.html#diga" class="fundo-chave blue">Diga</a>)</li>
-    <li class="estrela-2">Adicione novos obstáculos com diferentes comportamentos. </li>
+    <li class="estrela-1">Inclua uma tela de vitória com uma mensagem animada ao derrotar o Chefão.</li>
+    <li class="estrela-2">Adicione um contador de tempo para registrar quanto tempo o jogador leva para vencer.</li>
+	<li class="estrela-2">Insira mais obstáculos e inimigos.</li>
+    <li class="estrela-3">Crie sua masmorra com novas fases, inimigos e um novo chefão final.</li>
   </ul>
 </section> 
 
