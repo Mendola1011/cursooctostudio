@@ -451,7 +451,6 @@ footer .social-links a:hover {
   display: block;
 }
 
-/* Only show mobile-only elements on small screens */
 @media (max-width: 768px) {
   .mobile-only {
     display: inline-block;
@@ -463,13 +462,22 @@ footer .social-links a:hover {
 
   .project-section {
     flex-direction: column;
-    text-align: center;
+    text-align: justify; /* parágrafos justificados */
+  }
+
+  .project-section h2,
+  .project-section .show-image-btn {
+    text-align: center;    /* centraliza título e botão */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .project-section div {
     width: 100%;
   }
 }
+
 
 .contact-section {
   max-width: 800px;
