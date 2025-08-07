@@ -24,7 +24,7 @@
 
     <h1 class="main-title">Projeto 1 - Pato (Introdutório)</h1>
     <div class="chapter-intro">
-	<p> Neste projeto introdutório, os alunos vão conhecer a interface do Octostudio e experimentar seus primeiros blocos de programação, desenvolvendo um pato animado se movimenta, pula e emite sons, tudo com poucos comandos. O objetivo principal é permitir que os estudantes se familiarizem com a lógica de programação visual, sem a pressão de ter que fazer um jogo complexo. O jogo do Pato é composto por apenas um ator e dois pequenos conjuntos de blocos.
+	<p> Neste projeto introdutório, os alunos vão conhecer a interface do Octostudio e experimentar seus primeiros blocos de programação, desenvolvendo um pato animado se movimenta, pula e emite sons, tudo com poucos comandos. O objetivo principal é permitir que os estudantes se familiarizem com o sistema de programação por blocos, sem a pressão de ter que fazer um jogo complexo. Este é o único projeto que não tem formato de jogo.
     </p>
     </div>
 	
@@ -62,13 +62,15 @@
     </div>
     <div>
       <h2>O Ator Pato</h2>
+	  <p>Sugerimos que você abra essa aula descrevendo o comportamento esperado para o pato: caminhar, emitir um som, caminhar, pular 3 vezes, caminhar e emitir um som mais uma vez. É importante que os estudantes explorem o Octostudio com algum objetivo em mente, seja a descrição do funcionamento de um jogo, seja uma sequência de ações.</p>
       <p>
-       Começaremos com o código que é iniciado pelo botão <a href="../../manual.html#quando-play" class="fundo-chave yellow">Quando Play</a>, que significa que quando o jogo for iniciado o pato irá executar uma sequência de ações: ele se moverá para a direita utilizando o bloco <a href="../../manual.html#mova" class="fundo-chave green">Mova</a>, emitirá um som utilizando o bloco <a href="../../manual.html#toque-o-som" class="fundo-chave blue">Toque o Som</a> moverá-se novamente, e então pulará três vezes usando o bloco <a href="../../manual.html#repita" class="fundo-chave orange">Repita</a> combinado com o <a href="../../manual.html#pule" class="fundo-chave green">Pule</a>, depois ele se moverá mais uma vez para frente e emitirá novamente o som.
-      </p>
-
+       Começaremos com o código que é iniciado pelo comando <a href="../../manual.html#quando-play" class="fundo-chave yellow">Quando Play</a>, que significa que quando o jogo for iniciado o pato irá executar uma sequência de ações. Outros comandos da família de blocos amarelos poderiam ser usados, como o Quando agitar e o resultado seria um pato que realiza as ações quando o celular é agitado e não quando o botão de play é pressionado.</p>
+	   <p>Em relação aos movimentos, o pato se moverá para a direita utilizando o bloco <a href="../../manual.html#mova" class="fundo-chave green">Mova</a>, emitirá um som utilizando o bloco <a href="../../manual.html#toque-o-som" class="fundo-chave blue">Toque o Som</a> mover-se-á novamente, e então pulará três vezes usando o bloco <a href="../../manual.html#repita" class="fundo-chave orange">Repita</a> combinado com o <a href="../../manual.html#pule" class="fundo-chave green">Pule</a>. Esse é um ponto crucial deste projeto: os três pulos podem ser feitos com o encadeamento de três blocos <a href="../../manual.html#pule" class="fundo-chave green">Pule</a> ou com a combinação do bloco <a href="../../manual.html#repita" class="fundo-chave orange">Repita</a> com o bloco <a href="../../manual.html#pule" class="fundo-chave green">Pule</a> como mostrado na imagem. Sugerimos fortemente que o professor certifique-se de que todos os estudantes usaram o bloco <a href="../../manual.html#repita" class="fundo-chave orange">Repita</a>, pois esse tipo de combinação será muito comum nos demais projetos.</p>
+	  <p>Depois, o pato se moverá mais uma vez para frente e emitirá o som.</p>
       <p>
-       Também faremos um segundo separado, com a intenção de fazer o pato brilhar quando tocarmos nele, então utilizaremos o bloco <a href="../../manual.html#quando-tocar" class="fundo-chave yellow">Quando Tocar</a> no pato, juntamente com o bloco <a href="../../manual.html#brilhe" class="fundo-chave pink">Brilhe</a>. 
-      </p>
+       Por fim, vamos criar um segundo comportamento para o pato: brilhar ao ser tocado na tela com o dedo. Para isso, criamos um segundo conjunto de comandos separado do anterior, e utilizaremos o bloco <a href="../../manual.html#quando-tocar" class="fundo-chave yellow">Quando Tocar</a> no pato juntamente com o bloco <a href="../../manual.html#brilhe" class="fundo-chave pink">Brilhe</a>.</p>
+	   <p>Esse segundo conjunto de comandos é importante para deixar claro que um mesmo ator pode ter vários conjuntos de comandos que são iniciados por eventos (os blocos amarelos) de diferentes tipos.</p>
+	   <p>Uma vez criadas essas funcionalidades, deixe seus estudantes explorar o aplicativo, agregando mais comandos aos conjuntos já criados, criando novos conjuntos no mesmo ator ou, até mesmo, inserindo um outro ator com novos comportamentos.</p>
     </div>
   </section>
   </main>
