@@ -242,10 +242,10 @@ footer .social-links a:hover {
 }
 
 .project-section {
-  max-width: 800px; /* antes era 800px */
+  max-width: 800px; 
   margin: 2rem auto;
   background-color: var(--color-primary-light);
-  padding: 1rem 2rem 2rem 2rem;  /* antes era 2rem */
+  padding: 1rem 2rem 2rem 2rem;  
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   line-height: 1.6;
@@ -253,7 +253,7 @@ footer .social-links a:hover {
   display: flex;
   align-items: center;
   text-align: justify;
-  flex-wrap: wrap; /* importante para responsividade */
+  flex-wrap: wrap; 
 }
 
 .project-section img {
@@ -316,7 +316,7 @@ footer .social-links a:hover {
 
 /* Lightbox overlay */
 .lightbox-overlay {
-  display: none; /* inicia oculto */
+  display: none; 
   position: fixed;
   top: 0;
   left: 0;
@@ -407,12 +407,12 @@ footer .social-links a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-wrap: wrap; /* importante para responsividade */
+  flex-wrap: wrap; 
 }
 
 .futuro h2 {
   color: var(--color-primary);
-  margin-top: 0;     /* ✅ isso evita o espaçamento extra */
+  margin-top: 0;     
   margin-bottom: 0;
 }
 
@@ -424,7 +424,7 @@ footer .social-links a:hover {
 
 .futuro li {
   position: relative;
-  padding-left: 3rem;  /* ⬅️ aumenta o espaço para até 3 estrelas */
+  padding-left: 3rem;  
   margin-bottom: 0.75rem;
   line-height: 1.6;
 }
@@ -432,7 +432,7 @@ footer .social-links a:hover {
 .futuro li::before {
   position: absolute;
   left: 0;
-  bottom: 0.1rem; /* alinha verticalmente com o texto */
+  bottom: 0.1rem; 
   font-size: 1rem;
   color: gold;
   font-family: "Segoe UI Symbol", "Arial Unicode MS", sans-serif;
@@ -452,7 +452,7 @@ footer .social-links a:hover {
 }
 
 
-/* Hide/show based on screen size */
+
 .mobile-only {
   display: none;
 }
@@ -472,12 +472,12 @@ footer .social-links a:hover {
 
   .project-section {
     flex-direction: column;
-    text-align: justify; /* parágrafos justificados */
+    text-align: justify; 
   }
 
   .project-section h2,
   .project-section .show-image-btn {
-    text-align: center;    /* centraliza título e botão */
+    text-align: center;    
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -554,7 +554,7 @@ footer .social-links a:hover {
 }
 
 .blocos-lista li {
-  flex: 1 1 200px; /* grow, shrink, base width */
+  flex: 1 1 200px; 
   max-width: 220px;
 }
 
@@ -667,6 +667,7 @@ footer .social-links a:hover {
     gap: 0.5rem;
   }
 }
+
 
 
 
