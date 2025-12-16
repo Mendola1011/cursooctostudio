@@ -286,6 +286,10 @@ footer .social-links a:hover {
   color: var(--color-accent);
 }
 
+.project-section a.fundo-chave {
+  color: black;
+}
+
 .fundo-chave {
   font-family: 'Noto Sans Mono', monospace;
   margin-top: 1rem;
@@ -667,6 +671,7 @@ footer .social-links a:hover {
     gap: 0.5rem;
   }
 }
+
 
 
 
